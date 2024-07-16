@@ -4,6 +4,14 @@
 {% block title %}Test{% endblock %}
 
 {% block content %}
-<h1>Welcome to the Test Page</h1>
-<p>This is the test page content.</p>
+<h1>Это страница отображения постов</h1>
+{% for post in posts %}
+    <div>
+        <h3>{{ post.title }}</h3>
+        <h4>Имя пользователя: {{ post.name }}</h4>
+        <p>{{ post.short_decr }}</p>
+        <p>{{ post.text }}</p>
+        <p>{{ post.put_date }}</p>
+    </div>
+{% endfor %}
 {% endblock %}
